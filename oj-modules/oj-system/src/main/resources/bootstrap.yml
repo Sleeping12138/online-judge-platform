@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: oj-system
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      discovery:
+        namespace: ce67642a-1760-47f9-a883-95a1fec5bf95
+        server-addr: http://localhost:8848
+      config:
+        namespace: ce67642a-1760-47f9-a883-95a1fec5bf95
+        server-addr: http://localhost:8848
+        file-extension: yaml
+
+mybatis-plus:
+  configuration: # 配置打印 MyBatis-plus日志
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: "classpath*:/mapper/**.xml" # Mapper.xml

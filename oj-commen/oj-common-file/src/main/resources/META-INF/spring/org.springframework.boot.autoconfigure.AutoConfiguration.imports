@@ -1,0 +1,3 @@
+com.OjSystem.common.file.config.OSSProperties
+com.OjSystem.common.file.config.OSSConfig
+com.OjSystem.common.file.service.OSSService

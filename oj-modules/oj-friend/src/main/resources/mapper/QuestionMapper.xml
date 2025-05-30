@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.OjSystem.friend.mapper.question.QuestionMapper">
+
+
+    <select id="selectByQuestionIds" resultType="com.OjSystem.friend.domain.question.Question">
+        select * from tb_question
+        where question_id in
+        <foreach collection="questionList" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        ORDER BY FIELD(question_id,
+        <foreach collection="questionList" item="id" separator=",">
+            #{id}
+        </foreach>
+        )
+    </select>
+</mapper>

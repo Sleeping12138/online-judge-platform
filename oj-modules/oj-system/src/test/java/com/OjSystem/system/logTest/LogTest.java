@@ -1,0 +1,14 @@
+package com.OjSystem.system.logTest;
+
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+@Slf4j
+public class LogTest {
+    @Test
+    public void test() {
+        log.info("hello world");
+    }
+}

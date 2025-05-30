@@ -1,0 +1,23 @@
+package com.OjSystem.system.domain.exam;
+
+import com.OjSystem.common.core.domain.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@TableName("tb_exam_question")
+@EqualsAndHashCode(callSuper = true)
+public class ExamQuestion extends BaseEntity {
+
+    @TableId(value = "EXAM_QUESTION_ID", type = IdType.ASSIGN_ID)
+    private Long examQuestionId;
+
+    private Long examId;
+
+    private Long questionId;
+
+    private Integer questionOrder;
+}

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: oj-job
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      discovery:
+        namespace: ce67642a-1760-47f9-a883-95a1fec5bf95
+        server-addr: http://localhost:8848
+      config:
+        namespace: ce67642a-1760-47f9-a883-95a1fec5bf95
+        server-addr: http://localhost:8848
+        file-extension: yaml
